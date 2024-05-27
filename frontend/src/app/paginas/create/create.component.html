@@ -1,0 +1,42 @@
+<div class="container text-center">
+    <div class="mt-4">
+        <img src="/assets/5.png" width="100" height="100" alt="">
+        <h2>PRODUCTOS</h2>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title text-center">INSERTAR PRODUCTO</h5>
+            <app-generic-form (submitValues)="onSubmit($event)">
+            </app-generic-form>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center">
+    <div class="mt-4">
+        <img src="/assets/5.png" width="100" height="100" alt="">
+        <h2>EMPLEADOS</h2>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title text-center">INSERTAR EMPLEADO</h5>
+            <app-generic-form (enviarErrores)="enviarErrores($event)">
+            </app-generic-form>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center">
+    <div class="mt-4">
+        <img src="/assets/5.png" width="100" height="100" alt="">
+        <h2>PROVEEDORES</h2>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title text-center">INSERTAR PROVEEDOR</h5>
+            <app-generic-form (enviarProveedor)="enviarProveedor($event)">
+            </app-generic-form>
+        </div>
+    </div>
+</div>
+

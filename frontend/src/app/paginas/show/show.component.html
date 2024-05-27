@@ -1,0 +1,117 @@
+<div class="container text-center">
+    <div class="mt-4">
+        <img src="/assets/5.png" width="100" height="100" alt="">
+        <h2>PRODUCTOS</h2>
+    </div>
+    <div class="d-grid gap-2">
+        <a routerLink="/crear" class="btn btn-crear">Añadir producto</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+              <tr class="table-info">
+                <th style="display: none">Id</th>
+                <th>Description</th>
+                <th>Categoria</th>
+                <th>Stock</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producto of productos; let i = index">
+                  <td style="display: none">{{ producto._id }}</td>
+                  <td>{{ producto.descripcion}}</td>
+                  <td>{{ producto.categoria}}</td>
+                  <td>{{ producto.precio }}</td>
+                  <td>{{ producto.stock }}</td>
+                  <td>
+                    <div class="btn-group">
+                      <a routerLink="/actualizar/{{ producto._id }}" class="btn btn-editar"><fa-icon [icon]="faPen"></fa-icon></a>
+                      <button (click)="eliminar(producto._id, i)" class="btn btn-eliminar"><fa-icon [icon]="faTrash"></fa-icon></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="container text-center">
+    <div class="mt-4">
+        <img src="/assets/5.png" width="100" height="100" alt="">
+        <h2>EMPLEADOS</h2>
+    </div>
+    <div class="d-grid gap-2">
+        <a routerLink="/crearempleado" class="btn btn-crear">Añadir Nuevo Empleado</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+              <tr class="table-info">
+                <th style="display: none">Id</th>
+                <th>Nombre</th>
+                <th>Documento</th>
+                <th>Cargo</th>
+                <th>Correo Electrónico</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let empleado of empleados; let i = index">
+                  <td style="display: none">{{ empleado._id }}</td>
+                  <td>{{ empleado.nombre}}</td>
+                  <td>{{ empleado.documento}}</td>
+                  <td>{{ empleado.cargo }}</td>
+                  <td>{{ empleado.correo }}</td>
+                  <td>
+                    <div class="btn-group">
+                      <a routerLink="/actualizarempleado/{{ empleado._id }}" class="btn btn-editar"><fa-icon [icon]="faPen"></fa-icon></a>
+                      <button (click)="eliminarEmpleado(empleado._id, i)" class="btn btn-eliminar"><fa-icon [icon]="faTrash"></fa-icon></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container text-center">
+    <div class="mt-4">
+        <img src="/assets/5.png" width="100" height="100" alt="">
+        <h2>PROVEEDORES</h2>
+    </div>
+    <div class="d-grid gap-2">
+        <a routerLink="/crearproveedor" class="btn btn-crear">Añadir Nuevo Proveedor</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+              <tr class="table-info">
+                <th style="display: none">Id</th>
+                <th>Nombre Proveedor</th>
+                <th>NIT Proveedor</th>
+                <th>Correo Proveedor</th>
+                <th>Teléfono Proveedor</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let proveedor of proveedores; let i = index">
+                  <td style="display: none">{{ proveedor._id }}</td>
+                  <td>{{ proveedor.nombre_proveedor}}</td>
+                  <td>{{ proveedor.nit}}</td>
+                  <td>{{ proveedor.correo_proveedor}}</td>
+                  <td>{{ proveedor.telefono_proveedor }}</td>
+                  <td>
+                    <div class="btn-group">
+                      <a routerLink="/actualizarproveedor/{{ proveedor._id }}" class="btn btn-editar"><fa-icon [icon]="faPen"></fa-icon></a>
+                      <button (click)="eliminarProveedor(proveedor._id, i)" class="btn btn-eliminar"><fa-icon [icon]="faTrash"></fa-icon></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+        </table>
+    </div>
+</div>

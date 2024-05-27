@@ -1,0 +1,33 @@
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title text-center">EDITAR PRODUCTO</h5>
+        <app-generic-form
+        *ngIf="modelo" 
+        [modeloProducto]="modelo"
+        (submitValues)="onSubmit($event)"
+        ></app-generic-form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title text-center">EDITAR EMPLEADO</h5>
+        <app-generic-form
+        *ngIf="modeloEmpleado" 
+        [modeloEmpleado]="modeloEmpleado"
+        (enviarErrores)="enviarErrores($event)"
+        ></app-generic-form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title text-center">EDITAR PROVEEDOR</h5>
+        <app-generic-form
+        *ngIf="modeloProveedor" 
+        [modeloProveedor]="modeloProveedor"
+        (enviarProveedor)="enviarProveedor($event)"
+        ></app-generic-form>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+<form [formGroup]="formProducto" (ngSubmit)="onSubmit()" class="mt-5">
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Descripción</label>
+        <div class="col-sm-10">
+            <input formControlName="descripcion" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Categoria</label>
+        <div class="col-sm-10">
+            <input formControlName="categoria" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Stock</label>
+        <div class="col-sm-10">
+            <input formControlName="stock" type="number" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Precio</label>
+        <div class="col-sm-10">
+            <input formControlName="precio" type="number" class="form-control">
+        </div>
+    </div>
+    <div class="btn-group float-end" role="group">
+        <button [disabled]="!formProducto.valid" type="submit" class="btn btn-primary">Crear</button>
+        <a routerLink="/" class="btn btn-outline-secondary">Cancelar</a>
+    </div>
+</form>
+
+<form [formGroup]="formEmpleados" (ngSubmit)="enviarErroresE()" class="mt-5">
+    <div class="row mb-4">
+        <label class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+            <input formControlName="nombre" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Documento</label>
+        <div class="col-sm-10">
+            <input formControlName="documento" type="number" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Cargo</label>
+        <div class="col-sm-10">
+            <input formControlName="cargo" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Correo</label>
+        <div class="col-sm-10">
+            <input formControlName="correo" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="btn-group float-end" role="group">
+        <button [disabled]="!formEmpleados.valid" type="submit" class="btn btn-primary">Añadir Empleado</button>
+        <a routerLink="/" class="btn btn-outline-secondary">Cancelar</a>
+    </div>
+</form>
+
+<form [formGroup]="formProveedores" (ngSubmit)="enviarProveedores()" class="mt-5">
+    <div class="row mb-4">
+        <label class="col-sm-2 col-form-label">Nombre Proveedor</label>
+        <div class="col-sm-10">
+            <input formControlName="nombre_proveedor" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">NIT</label>
+        <div class="col-sm-10">
+            <input formControlName="nit" type="number" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Correo Proveedor</label>
+        <div class="col-sm-10">
+            <input formControlName="correo_proveedor" type="text" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Teléfono Proveedor</label>
+        <div class="col-sm-10">
+            <input formControlName="telefono_proveedor" type="number" class="form-control">
+        </div>
+    </div>
+    <div class="btn-group float-end" role="group">
+        <button [disabled]="!formProveedores.valid" type="submit" class="btn btn-primary">Añadir Proveedor</button>
+        <a routerLink="/" class="btn btn-outline-secondary">Cancelar</a>
+    </div>
+</form>
